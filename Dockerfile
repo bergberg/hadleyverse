@@ -99,7 +99,7 @@ RUN install2.r --error \
     tufte \
     xml2 \
     rstan \
-    stanarm \
+    rstanarm \
     monetdblite
 
 ## Manually install (useful packages from) the SUGGESTS list of the above packages.
