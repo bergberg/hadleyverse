@@ -1,5 +1,5 @@
-FROM rocker/rstudio
-MAINTAINER "Carl Boettiger and Dirk Eddelbuettel" rocker-maintainers@eddelbuettel.com
+FROM bergberg/rocker-tidyverse-plus
+MAINTAINER "none" dev@null.com
 
 RUN apt-get update && apt-get -y install -t unstable --no-install-recommends libgdal-dev
 
@@ -97,7 +97,10 @@ RUN install2.r --error \
     svglite \
     tibble \
     tufte \
-    xml2 
+    xml2 \
+    rstan \
+    stanarm \
+    monetdblite
 
 ## Manually install (useful packages from) the SUGGESTS list of the above packages.
 ## (because --deps TRUE can fail when packages are added/removed from CRAN)
